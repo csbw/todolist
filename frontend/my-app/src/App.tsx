@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
 
+type Task ={taskNumber:number, taskDescription:string}
+
 function App() {
-  const [tasks, setTasks] = useState([]); // State to manage the list of tasks
+  const [tasks, setTasks] = useState<Task[]>([]); // State to manage the list of tasks
   const [editing, setEditing] = useState(false); // State to determine if user is editing
   const [newTask, setNewTask] = useState(''); // State to store input
 
@@ -17,7 +18,7 @@ function App() {
   const startEditing = () => {
   setEditing(true)};
 
-  const handleChange = (event) => {
+  const handleChange = (event:React.ChangeEvent<HTMLInputElement>) => {
     setNewTask(event.target.value);
   };
 
@@ -34,7 +35,7 @@ function App() {
   );
 }
 
-function Task({ taskDescription }) {
+function Task({ taskDescription}:{taskDescription: string}) {
   return (
     <p>
       <input type="checkbox" />
@@ -44,3 +45,4 @@ function Task({ taskDescription }) {
 }
 
 export default App;
+

@@ -1,5 +1,14 @@
 {
   "dependencies": {
-    "react-query": "^3.39.3"
+    "@graphql-codegen/cli": "^5.0.0",
+    "@graphql-codegen/typescript": "^4.0.1",
+    "@types/jest": "^29.5.3",
+    "@types/node": "^20.4.7",
+    "@types/react": "^18.2.18",
+    "@types/react-dom": "^18.2.7",
+    "graphql": "^16.7.1",
+    "react-query": "^3.39.3",
+    "typescript": "^5.1.6",
+    "urql": "^4.0.5"
   }
 }
