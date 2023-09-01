@@ -34,13 +34,12 @@ class Mutation:
         return task
 
 
-def schema():
-    return strawberry.Schema(query=Query, mutation=Mutation)
+schema = strawberry.Schema(query=Query, mutation=Mutation)
 
 
 app.add_url_rule(
     "/graphql",
-    view_func=GraphQLView.as_view("graphql_view", schema=schema()),
+    view_func=GraphQLView.as_view("graphql_view", schema=schema),
 )
 
 

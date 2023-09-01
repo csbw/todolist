@@ -1,0 +1,13 @@
+type Mutation {
+  newTask(description: String!): Task!
+  markDone(taskId: Int!): Task!
+}
+
+type Query {
+  listTasks: [Task!]!
+}
+
+type Task {
+  description: String!
+  done: Boolean!
+}
