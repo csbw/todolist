@@ -1,0 +1,6 @@
+query ListTasks {
+    listTasks {
+        description
+        done
+    }
+}
